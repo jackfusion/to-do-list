@@ -7,7 +7,13 @@
   <ul>
     <li *ngFor="let item of allItems">
       {{item.description}}
-      <input type="checkbox" [checked]="item.isDone" (click)="checkValue()" />
+      <input type="checkbox"
+        [checked]="item.isDone"
+        (click)="checkValue()"
+        (change)="changeEvent($event)"
+        [(ngModel)]="item.isDone"
+        />
+        <span (click)="deleteItem(item)">delete</span>
     </li>
   </ul>
 </div>

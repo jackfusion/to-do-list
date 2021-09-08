@@ -21,7 +21,12 @@ export class AppComponent {
       description: description, isDone: false
     });
   }
-  checkValue() {
+
+  deleteItem(item: any) {
+    console.log(item);
+  }
+  checkValue() {}
+  changeEvent(e: any) {
     console.table(this.allItems);
   }
 }
