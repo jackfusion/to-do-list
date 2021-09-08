@@ -21,4 +21,7 @@ export class AppComponent {
       description: description, isDone: false
     });
   }
+  checkValue() {
+    console.table(this.allItems);
+  }
 }
