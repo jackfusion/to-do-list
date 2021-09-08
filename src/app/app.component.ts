@@ -24,9 +24,14 @@ export class AppComponent {
 
   deleteItem(item: any) {
     console.log(item);
+    //const index = this.allItems.indexOf(item);
+    const index = this.allItems.findIndex((i) => i === item);
+
+    this.allItems.splice(index, 1);
   }
   checkValue() {}
   changeEvent(e: any) {
     console.table(this.allItems);
+
   }
 }
